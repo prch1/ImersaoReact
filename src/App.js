@@ -1,16 +1,10 @@
 import React from 'react';
-import styled from 'styled-components';
 import Menu from './components/Menu/index';
 import dadosIniciais from './data/dados_iniciais.json';
 import BannerMain from './components/BannerMain';
 import Carousel from './components/Carousel';
 import Footer from './components/Footer';
 import   './components/Menu/style.js'
-
-
-const AppWrapper = styled.div `
-  background : var(--graydark);
-`;
 
 
 function App() {
