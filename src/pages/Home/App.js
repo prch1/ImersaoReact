@@ -4,18 +4,34 @@ import dadosIniciais from '../../data/dados_iniciais.json';
 import BannerMain from '../../components/BannerMain';
 import Carousel from '../../components/Carousel';
 import Footer from '../../components/Footer';
+import styled from'styled-components';
 
+
+const AppWrapper = styled.div`
+   background-color: var(--grayDark);
+
+   padding-top:5px; /**94px*/
+
+@media (max-width:800px){
+  padding-top:5px; /**40px*/
+}
+
+@media (max-width:800px){
+  padding-top:50px;
+}
+
+
+`;
 
 function Home() {
   return (
 
-    <div style= { { backgroundColor: "#141414"  } } >   
-  
+  <AppWrapper>
       <Menu />
       <BannerMain
          videoTitle = {dadosIniciais.categorias[0].videos[0].titulo}
          url ={dadosIniciais.categorias[0].videos[0].url}
-         videoDescription ={"O que é front-end? Trabalhando na área os termos HTML,CSS e JavaScript"}
+         videoDescription ={"Welcome to The New Age"}
       />
       
       <Carousel
@@ -44,8 +60,7 @@ function Home() {
       />      
 
       <Footer />
-
-    </div>
+      </AppWrapper>
   );
 }
 
