@@ -1,13 +1,12 @@
 import React from 'react';
-import Menu from './components/Menu/index';
-import dadosIniciais from './data/dados_iniciais.json';
-import BannerMain from './components/BannerMain';
-import Carousel from './components/Carousel';
-import Footer from './components/Footer';
-import   './components/Menu/style.js'
+import Menu from '../../components/Menu/index';
+import dadosIniciais from '../../data/dados_iniciais.json';
+import BannerMain from '../../components/BannerMain';
+import Carousel from '../../components/Carousel';
+import Footer from '../../components/Footer';
 
 
-function App() {
+function Home() {
   return (
 
     <div style= { { backgroundColor: "#141414"  } } >   
@@ -50,4 +49,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;
