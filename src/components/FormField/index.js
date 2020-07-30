@@ -1,12 +1,21 @@
-import React from "react";
+import React from 'react';
+import styled from "styled-components";
+
+
+const Input = styled.input`
+
+`;
 
 function FormField({label,type,name,value,onChange})
 {
+  const isTextArea = type  ==='textarea'; 
+  const tag = isTextArea ? 'textarea' : 'input';
   return (
     <div>
         <label>
             {label} :
-          <input
+          <Input
+            as={tag}
             type={type}
             name ={name}
             value ={value}
