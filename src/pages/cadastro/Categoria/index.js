@@ -30,8 +30,10 @@ function CadastroCategoria(){
 
    useEffect(() => {
       console.log('alo alo');
-      const url = 'http://localhost:8080/categorias';
-      fetch(url)
+      const URL = window.location.hostname.includes('localhost')
+      ? 'http://localhost:8080/categorias' 
+      : 'https://prflix.herokuapp.com/categorias';
+      fetch(URL)
       .then(async(respotaDoServidor) => {
         const resposta = await respotaDoServidor.json();
         setCategorias([...resposta,]);
