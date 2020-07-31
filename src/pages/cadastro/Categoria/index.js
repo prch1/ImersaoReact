@@ -1,4 +1,4 @@
-import React,{ useState } from 'react';
+import React,{ useState, useEffect } from 'react';
 import PageBase from '../../../components/PageBase';
 import {Link} from 'react-router-dom';
 import FormField from '../../../components/FormField';
@@ -27,7 +27,35 @@ function CadastroCategoria(){
         infosDoEvento.target.value
         );
       } 
-  
+
+   useEffect(() => {
+      console.log('alo alo');
+      const url = 'http://localhost:8080/categorias';
+      fetch(url)
+      .then(async(respotaDoServidor) => {
+        const resposta = await respotaDoServidor.json();
+        setCategorias([...resposta,]);
+      });
+
+      /*setTimeout(() => {
+        setCategorias([
+            ...categorias,
+            {
+              id: 1,
+              nome: 'XXXXXX',
+              descricao: 'YYYYYYY',
+              cor: '#cbd1ff',
+            },
+            {
+              id: 2,
+              nome: 'bbbbbb',
+              descricao: 'fffffff',
+              cor: '#cbd1ff',
+            },
+          ]);
+        }, 4 * 1000);*/
+        } ,[]);
+
     return (
       <PageBase>
          <h1>Cadastro de Categoria : {values.nome}</h1>
@@ -69,6 +97,12 @@ function CadastroCategoria(){
         Cadastrar
       </button>
     </form>
+
+     {categorias.length ===0 && (
+     <div>
+       {/*Carregando...*/}
+       Loading...
+     </div> )}
 
         <ul>
           {categorias.map((categoria, indice) => {
