@@ -1,0 +1,18 @@
+{
+    "categorias":
+    [
+      {
+        "id" :1,
+        "nome":"XXXXXX",
+        "descricao" :"YYYYYYY",
+        "cor":"#cbd1ff"
+      },
+      {
+        "id" :2,
+        "nome":"bbbbbb",
+        "descricao" :"fffffff",
+        "cor":"#cbd1ff"
+      }
+
+    ]
+}
