@@ -1,18 +1,39 @@
 {
-    "categorias":
-    [
-      {
-        "id" :1,
-        "categoriaId":1,
-        "titulo" :"Elisiun ",
-        "url":"https://www.youtube.com/watch?v=oIBtePb-dGY"
-      },
-      {
-        "id" :2,
-        "categoriaId":2,
-        "titulo" :"Otherlife",
-        "url ":"https://www.youtube.com/watch?v=qav2Z0TgYMA"
+  "categorias": [
+    {
+      "id": 6,
+      "titulo": "DevSoutinho",
+      "cor": "#ff6a00",
+      "link_extra": {
+        "text": "Canal no YouTube",
+        "url": "https://youtube.com/c/DevSoutinho"
       }
+    },
+    {
+      "id": 7,
+      "titulo": "Games",
+      "cor": "red",
+      "link_extra": {
+        "text": "Formação de Jogos na Alura",
+        "url": "https://www.alura.com.br/cursos-online-front-end"
+      }
+    }
+  ],
 
-    ]
+  "videos": [
+    {
+      "id": 50,
+      "categoriaId": 6,
+      "titulo": "SEO com React",
+      "description": "Será que é tão difícil fazer SEO com React?",
+      "url": "https://www.youtube.com/watch?v=c8mVlakBESE"
+    },
+    {
+      "id": 51,
+      "categoriaId": 7,
+      "titulo": "Como fazer um React e aprender a ideia do Virtual DOM na prática",
+      "description": "Já parou pra pensar como que o React renderiza as coisas na tela?",
+      "url": "https://www.youtube.com/watch?v=5MzOCxSWrrc"
+    }
+  ]
 }

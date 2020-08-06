@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useEffect, useState} from 'react';
 import Menu from '../../components/Menu/index';
-import dadosIniciais from '../../data/dados_iniciais.json';
+//import dadosIniciais from '../../data/dados_iniciais.json';
 import BannerMain from '../../components/BannerMain';
 import Carousel from '../../components/Carousel';
 import Footer from '../../components/Footer';
 import styled from'styled-components';
-
+import PageBase from '../../components/PageBase'
+import categoriasRepository from '../../repositories/categorias'
 
 const AppWrapper = styled.div`
    background-color: var(--grayDark);
@@ -20,47 +21,45 @@ const AppWrapper = styled.div`
   padding-top:50px;
 }
 
-
 `;
 
-function Home() {
+function Home(){
+  const [dadosIniciais, setDadosIniciais] = useState([]);
+
+ useEffect(() => {
+    categoriasRepository.getAllWithVideos()
+    .then((categoriasComVideos) => {
+      setDadosIniciais(categoriasComVideos);
+      })
+      .catch((err) => {
+         console.log(err.message);
+      });
+   },[]);
+
+
   return (
+   <PageBase passing>
 
-  <AppWrapper>
-      <Menu />
-      <BannerMain
-         videoTitle = {dadosIniciais.categorias[0].videos[0].titulo}
-         url ={dadosIniciais.categorias[0].videos[0].url}
-         videoDescription ={"Welcome to The New Age"}
-      />
-      
-      <Carousel
-        ignoreFirstVideo
-        category={dadosIniciais.categorias[0]}
-      />
+      {dadosIniciais.length ===0 && (<div>Loading...</div>)}
 
-      <Carousel
-        category={dadosIniciais.categorias[1]}
-      />
+      {dadosIniciais.length >=1 && (
+       
+       <>   
+          <BannerMain
+            videoTitle = {dadosIniciais[0].videos[0].titulo}
+            url ={dadosIniciais[0].videos[0].url}
+            videoDescription ={"Welcome to The New Age"}
+          />
+       
+          <Carousel
+            ignoreFirstVideo
+            category={dadosIniciais[0]}
+          />     
+       </>
+    
+    )}
 
-      <Carousel
-        category={dadosIniciais.categorias[2]}
-      />      
-
-      <Carousel
-        category={dadosIniciais.categorias[3]}
-      />      
-
-      <Carousel
-        category={dadosIniciais.categorias[4]}
-      />      
-
-      <Carousel
-        category={dadosIniciais.categorias[5]}
-      />      
-
-      <Footer />
-      </AppWrapper>
+    </PageBase>
   );
 }
 
