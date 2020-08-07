@@ -1,6 +1,6 @@
 import {useState} from 'react';
 
-export function useForm(valoresIniciais){
+function useForm(valoresIniciais){
     const [values,setValues] =  useState(valoresIniciais);
     
     function setValue(chave, valor){
@@ -13,7 +13,7 @@ export function useForm(valoresIniciais){
   
   function handleChange(infosDoEvento){
      setValue(infosDoEvento.target.getAttribute('name'), 
-     infosDoEvento.target.value
+     infosDoEvento.target.value,
      );
      } 
   
