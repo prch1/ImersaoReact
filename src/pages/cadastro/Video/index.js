@@ -3,9 +3,9 @@ import { Link, useHistory } from 'react-router-dom';
 import PageBase from '../../../components/PageBase';
 import useForm from '../../../hooks/useForm';
 import FormField from '../../../components/FormField';
-import Button from '../../../components/Button';
+//import Button from '../../../components/Button';
 import videosRepository from '../../../repositories/videos';
-//import categoriasRepository from '../../../repositories/categorias';
+import categoriasRepository from '../../../repositories/categorias';
 
 function CadastroVideo() {
   const history = useHistory();
@@ -17,14 +17,14 @@ function CadastroVideo() {
     categoria: 'Front End',
   });
 
- /* useEffect(() => {
+  useEffect(() => {
     categoriasRepository
       .getAll()
       .then((categoriasFromServer) => {
         setCategorias(categoriasFromServer);
       });
   }, []);
-*/
+
 
   return (
     <PageBase>
@@ -48,6 +48,7 @@ function CadastroVideo() {
             history.push('/');
           });
       }}
+
       >
         <FormField
           label="Título do Vídeo"
@@ -68,12 +69,17 @@ function CadastroVideo() {
           name="categoria"
           value={values.categoria}
           onChange={handleChange}
-          suggestions={categoryTitles}
+          suggestions={
+            [
+              'Front-End',
+              'Back End'
+            ]
+          }
         />
 
-        <Button type="submit">
-          Cadastrar
-        </Button>
+      <button >
+        Cadastrar
+      </button>
       </form>
 
       <br />

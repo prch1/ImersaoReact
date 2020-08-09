@@ -3,7 +3,6 @@ import PageBase from '../../../components/PageBase';
 import {Link} from 'react-router-dom';
 import FormField from '../../../components/FormField';
 import useForm from '../../../hooks/useForm';
-import categoriasRepository from '../../../repositories/categorias'
 
 function CadastroCategoria(){
              
@@ -11,18 +10,25 @@ function CadastroCategoria(){
           titulo:'',
           descricao :'',
           cor:'',
-       }
+       };
 
   const { handleChange,values, clearForm} = useForm(valoresIniciais);     
 
   const [categorias, setCategorias] = useState([]);
 
   useEffect(() => {
-    categoriasRepository.getAllWithVideos()
-    .then((categoriasComVideos) => {
-      console.log(categoriasComVideos);
+    const URL_TOP = window.location.hostname.includes('localhost')
+      ? 'http://localhost:8000/categorias'
+      : 'https://prflix.herokuapp.com/categorias';
+    // E a ju ama variáveis
+    fetch(URL_TOP)
+      .then(async (respostaDoServidor) => {
+        const resposta = await respostaDoServidor.json();
+        setCategorias([
+          ...resposta,
+        ]);
       });
-   });
+    }, []);
 
     return (
       <PageBase>
@@ -87,5 +93,6 @@ function CadastroCategoria(){
       </PageBase>
     )
   }
+
 
   export default CadastroCategoria;

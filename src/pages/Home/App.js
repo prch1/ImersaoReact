@@ -1,14 +1,14 @@
 import React, { useEffect, useState} from 'react';
-import Menu from '../../components/Menu/index';
+//import Menu from '../../components/Menu/index';
 //import dadosIniciais from '../../data/dados_iniciais.json';
 import BannerMain from '../../components/BannerMain';
 import Carousel from '../../components/Carousel';
-import Footer from '../../components/Footer';
+//import Footer from '../../components/Footer';
 import styled from'styled-components';
 import PageBase from '../../components/PageBase'
 import categoriasRepository from '../../repositories/categorias'
 
-const AppWrapper = styled.div`
+ const AppWrapper = styled.div`
    background-color: var(--grayDark);
 
    padding-top:5px; /**94px*/
