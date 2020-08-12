@@ -1,39 +1,265 @@
 {
   "categorias": [
     {
-      "id": 6,
-      "titulo": "DevSoutinho",
-      "cor": "#ff6a00",
+      "id": 1,
+      "titulo": "Distopia",
+      "cor": "#A020F0",
       "link_extra": {
-        "text": "Canal no YouTube",
-        "url": "https://youtube.com/c/DevSoutinho"
+        "text": "Distopia-A",
+        "url": "ttps://www.cyberpunk.net/us/en/"
       }
     },
     {
-      "id": 7,
-      "titulo": "Games",
+      "id": 2,
+      "titulo": "End",
       "cor": "red",
       "link_extra": {
-        "text": "Formação de Jogos na Alura",
+        "text": "Of Fuck World",
+        "url": "https://s3.amazonaws.com/cdn.chickenorpasta.com.br/content/uploads/2018/07/27144837/Akira-Kaneda-1013x620.jpg"
+      }
+    },
+    {
+      "id": 3,
+      "titulo": "Zombie",
+      "cor": "#7B68EE"
+    },
+    {
+      "id": 4,
+      "titulo": "Máquinas Dominam",
+      "cor": "#FF1493",
+      "link_extra": {
+        "text": "Extinção",
         "url": "https://www.alura.com.br/cursos-online-front-end"
+      }
+    },
+    {
+      "id": 5,
+      "titulo": "SoundTrack",
+      "cor": "#B0E0E6",
+      "link_extra": {
+        "text": "A trilha do fim",
+        "url": "https://www.alura.com.br/cursos-online-programacao"
+      }
+    },
+    {
+      "id": 6,
+      "titulo": "Mind Storm",
+      "cor": "#9cd33b",
+      "link_extra": {
+        "text": "Find the pill",
+        "url": "https://www.alura.com.br/cursos-online-mobile"
       }
     }
   ],
-
   "videos": [
     {
-      "id": 50,
-      "categoriaId": 6,
-      "titulo": "SEO com React",
-      "description": "Será que é tão difícil fazer SEO com React?",
-      "url": "https://www.youtube.com/watch?v=c8mVlakBESE"
+      "id": 1,
+      "categoriaId": 1,
+      "titulo": "Bem vindo a Era Cyberpunk",
+      "description": "Welcome to the End",
+      "url": "https://www.youtube.com/watch?v=teB1nW2GGbc"
     },
     {
-      "id": 51,
-      "categoriaId": 7,
-      "titulo": "Como fazer um React e aprender a ideia do Virtual DOM na prática",
-      "description": "Já parou pra pensar como que o React renderiza as coisas na tela?",
-      "url": "https://www.youtube.com/watch?v=5MzOCxSWrrc"
+      "id": 2,
+      "categoriaId": 1,
+      "titulo": "Matrix",
+      "description": "Matrix",
+      "url": "https://www.youtube.com/watch?v=iuslUzbJEaw"
+    },
+    {
+      "id": 3,
+      "categoriaId": 1,
+      "titulo": "Altered Carbon : Resleev",
+      "description": "Altered Carbon : Resleev",
+      "url": "https://www.youtube.com/watch?v=HmDxxoFslzs"
+    },
+    {
+      "id": 4,
+      "categoriaId": 1,
+      "titulo": "Revelancy of CyberPunk",
+      "description": "Revelancy of CyberPunk",
+      "url": "https://www.youtube.com/watch?v=YK6IjJkjkiI"
+    },
+    {
+      "id": 5,
+      "categoriaId": 1,
+      "titulo": "Blade Runner : 2049",
+      "description": "Blade Runner : 2049",
+      "url": "https://www.youtube.com/watch?v=nf0llz_Rfd0"
+    },
+    {
+      "id": 6,
+      "categoriaId": 1,
+      "titulo": "Blade Runner : O Caçador de Androids",
+      "description": "Blade Runner : O Caçador de Androids",
+      "url": "https://www.youtube.com/watch?v=ptKGSp4YpUs"
+    },
+    {
+      "id": 7,
+      "categoriaId": 1,
+      "titulo": "CyberPunk 77",
+      "description": "CyberPunk 77",
+      "url": "https://www.youtube.com/watch?v=V5yIlA6g_9o"
+    },
+    {
+      "id": 8,
+      "categoriaId": 1,
+      "titulo": "Altered Carbon",
+      "description": "Altered Carbon",
+      "url": "https://www.youtube.com/watch?v=-Yt89b5AcwY"
+    },
+    {
+      "id": 9,
+      "categoriaId": 2,
+      "titulo": "Akira Neo Tokyo",
+      "description": "Akira Neo Tokyo",
+      "url": "https://www.youtube.com/watch?v=uSQt4ckq-dg"
+    },
+    {
+      "id": 10,
+      "categoriaId": 2,
+      "titulo": "5 Elemento",
+      "description": "5 Elemento",
+      "url": "https://www.youtube.com/watch?v=4MR6D7tL38U"
+    },
+    {
+      "id": 11,
+      "categoriaId": 2,
+      "titulo": "Mad Max",
+      "description": "Mad Max",
+      "url": "https://www.youtube.com/watch?v=kFr8SdOS5ic"
+    },
+    {
+      "id": 12,
+      "categoriaId": 2,
+      "titulo": "O Livro de Eli",
+      "description": "O Livro de Eli",
+      "url": "https://www.youtube.com/watch?v=7xNZAAJEV-4"
+    },
+    {
+      "id": 13,
+      "categoriaId": 2,
+      "titulo": "RE 2",
+      "description": "RE 2",
+      "url": "https://www.youtube.com/watch?v=u3wS-Q2KBpk"
+    },
+    {
+      "id": 14,
+      "categoriaId": 3,
+      "titulo": "RE 3",
+      "description": "RE 3",
+      "url": "https://www.youtube.com/watch?v=QOKzmU5XOb4"
+    },
+    {
+      "id": 15,
+      "categoriaId": 3,
+      "titulo": "Guerra Mundial Z",
+      "description": "Guerra Mundial Z",
+      "url": "https://www.youtube.com/watch?v=Itc3k-Fc9Ls"
+    },
+    {
+      "id": 16,
+      "categoriaId": 3,
+      "titulo": "A Noite dos Mortos Vivos",
+      "description": "A Noite dos Mortos Vivos",
+      "url": "https://www.youtube.com/watch?v=YaELESlcj6g"
+    },
+    {
+      "id": 17,
+      "categoriaId": 3,
+      "titulo": "Terra dos Mortos",
+      "description": "Terra dos Mortos",
+      "url": "https://www.youtube.com/watch?v=27apK6OJtso"
+    },
+    {
+      "id": 18,
+      "categoriaId": 4,
+      "titulo": "Exterminador do Futuro",
+      "description": "Exterminador do Futuro",
+      "url": "https://www.youtube.com/watch?v=_zQDqSFn_hI"
+    },
+    {
+      "id": 19,
+      "categoriaId": 4,
+      "titulo": "Matrix",
+      "description": "Matrix",
+      "url": "https://www.youtube.com/watch?v=3WfR87K5zW8"
+    },
+    {
+      "id": 20,
+      "categoriaId": 4,
+      "titulo": "Gantz 0",
+      "description": "Gantz 0",
+      "url": "https://www.youtube.com/watch?v=r37ARGRJC-k"
+    },
+    {
+      "id": 21,
+      "categoriaId": 4,
+      "titulo": "Matrix III",
+      "description": "Matrix III",
+      "url": "https://www.youtube.com/watch?v=rz68m1wiVFY"
+    },
+    {
+      "id": 22,
+      "categoriaId": 5,
+      "titulo": "Action Music",
+      "description": "Action Music",
+      "url": "https://www.youtube.com/watch?v=xWpnTGmS8-Q"
+    },
+    {
+      "id": 23,
+      "categoriaId": 5,
+      "titulo": "Dark Techno",
+      "description": "Dark Techno",
+      "url": "https://www.youtube.com/watch?v=2ovZgUU9kgM"
+    },
+    {
+      "id": 24,
+      "categoriaId": 5,
+      "titulo": "CyberPolice",
+      "description": "CyberPolice",
+      "url": "https://www.youtube.com/watch?v=_IfYlVX-LEg"
+    },
+    {
+      "id": 25,
+      "categoriaId": 5,
+      "titulo": "CyberDemon",
+      "description": "CyberDemon",
+      "url": "https://www.youtube.com/watch?v=v2FX0Vbbwlc"
+    },
+    {
+      "id": 26,
+      "categoriaId": 6,
+      "titulo": "Yaksha",
+      "description": "Yaksha",
+      "url": "https://www.youtube.com/watch?v=A7WZhoGRjMI"
+    },
+    {
+      "id": 27,
+      "categoriaId": 6,
+      "titulo": "Back 80",
+      "description": "Back 80",
+      "url": "https://www.youtube.com/watch?v=fzK79PgKITI"
+    },
+    {
+      "id": 28,
+      "categoriaId": 6,
+      "titulo": "Batman Ninja",
+      "description": "Batman Ninja",
+      "url": "https://www.youtube.com/watch?v=CwPFxcefpdU"
+    },
+    {
+      "id": 29,
+      "categoriaId": 6,
+      "titulo": "City Of Future",
+      "description": "City Of Future",
+      "url": "https://www.youtube.com/watch?v=9LSXam09gvA"
+    },
+    {
+      "titulo": "Industrial Cyberpunk",
+      "url": "https://www.youtube.com/watch?v=T0MK5uGGW5I",
+      "categoriaId": 6,
+      "id": 30
     }
   ]
 }

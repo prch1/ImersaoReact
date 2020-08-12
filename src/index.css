@@ -12,7 +12,6 @@
   --white: #FFFFFF;
   --frontEnd: #6BD1FF;
   --backEnd: #00C86F;
-  --grayDark : #141414;
 }
 
 html,
@@ -25,8 +24,8 @@ a {
   color: inherit;
 } 
 
-#root{
+#root {
   min-height: calc(100vh - var(--bodyPaddingTop));
-  display:flex;
+  display: flex;
   flex-direction: column;
 }

@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
-import PageBase from '../../../components/PageBase';
+import PageDefault from '../../../components/PageDefault';
 import useForm from '../../../hooks/useForm';
 import FormField from '../../../components/FormField';
-//import Button from '../../../components/Button';
+import Button from '../../../components/Button';
 import videosRepository from '../../../repositories/videos';
 import categoriasRepository from '../../../repositories/categorias';
 
@@ -25,9 +25,8 @@ function CadastroVideo() {
       });
   }, []);
 
-
   return (
-    <PageBase>
+    <PageDefault>
       <h1>Cadastro de Video</h1>
 
       <form onSubmit={(event) => {
@@ -48,7 +47,6 @@ function CadastroVideo() {
             history.push('/');
           });
       }}
-
       >
         <FormField
           label="Título do Vídeo"
@@ -69,17 +67,12 @@ function CadastroVideo() {
           name="categoria"
           value={values.categoria}
           onChange={handleChange}
-          suggestions={
-            [
-              'Front-End',
-              'Back End'
-            ]
-          }
+          suggestions={categoryTitles}
         />
 
-      <button >
-        Cadastrar
-      </button>
+        <Button type="submit">
+          Cadastrar
+        </Button>
       </form>
 
       <br />
@@ -88,7 +81,7 @@ function CadastroVideo() {
       <Link to="/cadastro/categoria">
         Cadastrar Categoria
       </Link>
-    </PageBase>
+    </PageDefault>
   );
 }
 

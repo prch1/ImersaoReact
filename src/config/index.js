@@ -1,7 +1,7 @@
-const URL_BACKEND  = window.location.hostname.includes('localhost')
-? 'http://localhost:8000' 
-: 'https://prflix.herokuapp.com';
+const URL_BACKEND_TOP = window.location.hostname.includes('localhost')
+  ? 'http://localhost:8000'
+  : 'https://https://prflix.herokuapp.com/';
 
 export default {
-    URL_BACKEND,
+  URL_BACKEND_TOP,
 };
